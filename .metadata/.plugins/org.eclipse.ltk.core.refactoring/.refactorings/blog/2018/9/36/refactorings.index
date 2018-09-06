@@ -1,0 +1,15 @@
+1535954708140	Delete element
+1535954868022	Delete element
+1535957478955	Delete element
+1535960442169	Rename package 'com.mitrais.mainapp'
+1536113613252	Rename method 'findByTitleContainingOrContentContaining'
+1536121131998	Delete element
+1536125138273	Move compilation unit
+1536125154525	Delete element
+1536125186935	Rename type 'BlogRepositoryTest'
+1536125985851	Rename local variable 'deletedBlog'
+1536126643373	Rename local variable 'sampleBlog'
+1536126928608	Rename method 'cleanMemory'
+1536126988857	Rename local variable 'nonDeletedBlog'
+1536137131778	Delete element
+1536138291981	Delete element

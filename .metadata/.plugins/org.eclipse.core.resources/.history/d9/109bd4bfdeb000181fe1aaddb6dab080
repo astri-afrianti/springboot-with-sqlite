@@ -1,0 +1,3 @@
+spring.datasource.url=jdbc:sqlite://./restapi.db
+spring.datasource.username=
+spring.datasource.password=

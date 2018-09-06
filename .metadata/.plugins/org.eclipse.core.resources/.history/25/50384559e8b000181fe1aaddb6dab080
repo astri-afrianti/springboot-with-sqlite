@@ -1,0 +1,6 @@
+spring.datasource.url = jdbc:sqlite:mydb.db
+spring.jpa.database-platform=com.mitrais.blog.config.SqliteDialect
+#spring.jpa.hibernate.ddl-auto=create-drop
+spring.jpa.hibernate.ddl-auto=create
+spring.jpa.show-sql=true
+spring.jpa.hibernate.naming-strategy=org.hibernate.cfg.EJB3NamingStrategy

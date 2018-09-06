@@ -1,0 +1,17 @@
+package com.mitrais.blog.reporsitory;
+
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
+import org.springframework.stereotype.Repository;
+
+import com.mitrais.blog.model.Blog;
+
+@Repository
+public class BlogRepositoryImpl implements BlogRepository {
+
+	@Override
+	public Iterable<Blog> findBySearchTerm(String term, Pageable pageable, Sort sort) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+}

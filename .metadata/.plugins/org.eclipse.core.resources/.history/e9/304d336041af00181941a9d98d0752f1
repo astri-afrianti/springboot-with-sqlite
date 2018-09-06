@@ -1,0 +1,5 @@
+package com.mitrais.blog.model;
+
+public class Blog {
+
+}

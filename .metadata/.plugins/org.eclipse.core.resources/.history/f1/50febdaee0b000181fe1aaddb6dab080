@@ -1,0 +1,5 @@
+package com.mitrais.blog.config;
+
+public class SqliteDialect {
+
+}

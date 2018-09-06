@@ -1,0 +1,30 @@
+package com.mitrais.blog.controller;
+
+import java.util.List;
+import java.util.Map;
+
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.mitrais.blog.mockeddata.BlogMockedData;
+import com.mitrais.blog.model.Blog;
+
+@RestController
+public class BlogController {
+
+	BlogMockedData blogMockedData = BlogMockedData.getInstance();
+
+	@GetMapping("/")
+	public List<Blog> index() {
+		return blogMockedData.fetchBlogs();
+	}
+	
+	@PostMapping("/search")
+	public List<Blog> search(@RequestBody Map<String, String> body) {
+		String searchTerm = body.get("text");
+		return blogMockedData.searchBlogs(searchTerm);
+	}
+
+}

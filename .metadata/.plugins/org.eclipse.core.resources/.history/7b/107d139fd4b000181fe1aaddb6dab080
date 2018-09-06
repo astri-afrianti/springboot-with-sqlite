@@ -1,0 +1,12 @@
+package com.mitrais.blog.repository;
+
+/**
+ * This test class for CustomSearchRepository
+ * as the interface is tagged as @NoRepositoryBean,
+ * so we use BlogRepository as the concrete 
+ * @author Astri_A332
+ *
+ */
+public class CustomSearchRepositoryTest {
+
+}

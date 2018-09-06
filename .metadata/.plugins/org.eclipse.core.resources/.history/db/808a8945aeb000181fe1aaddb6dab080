@@ -1,0 +1,40 @@
+package com.mitrais.blog.service;
+
+import org.springframework.stereotype.Service;
+
+import com.mitrais.blog.model.Blog;
+
+@Service
+public interface BlogService {
+	
+	/**
+	 * Create new instance of Blog
+	 * 
+	 * @param to be inserted Blog 
+	 * @return inserted Blog
+	 */
+	public Blog createBlog(Blog blog);
+	
+	/**
+	 * Update existing Blog
+	 * 
+	 * @param to be updated Blog
+	 * @return updated Blog
+	 */
+	public Blog updateBlog(Blog blog);
+	
+	/**
+	 * Delete existing Blog by id
+	 * 
+	 * @param Blog id
+	 * @return true if success, false if there's error or no action taken
+	 */
+	public boolean deleteBlog(int id); 
+	
+	/**
+	 * 
+	 * @param id
+	 * @return
+	 */
+	public Blog find(int id);
+}

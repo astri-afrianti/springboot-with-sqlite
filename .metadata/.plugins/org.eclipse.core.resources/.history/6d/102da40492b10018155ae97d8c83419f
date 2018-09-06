@@ -1,0 +1,7 @@
+spring.datasource.url=jdbc:sqlite:mydb.db
+spring.datasource.driver-class-name=org.sqlite.JDBC
+#spring.jpa.database-platform=org.hibernate.dialect.SQLiteDialec
+#spring.jpa.hibernate.ddl-auto=create-drop
+spring.jpa.hibernate.ddl-auto=create
+spring.jpa.show-sql=true
+spring.jpa.hibernate.naming-strategy=org.hibernate.cfg.EJB3NamingStrategy

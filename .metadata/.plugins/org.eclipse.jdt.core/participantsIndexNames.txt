@@ -1,0 +1,5 @@
+INDEX VERSION 1.131
+E:\CDC\Java Bootcamp\Project\Spring\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2282832053.index
+\blog\src\main\resources
+E:\CDC\Java Bootcamp\Project\Spring\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1270744199.index
+\rms\src\main\resources

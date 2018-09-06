@@ -1,0 +1,14 @@
+package com.mitrais.blog.mockeddata;
+
+public class BlogMockedData {
+	private static BlogMockedData instance = null;
+
+	public static BlogMockedData getInstance() {
+		if (instance == null) {
+			instance = new BlogMockedData();
+		}
+		
+		return instance;
+	}
+
+}

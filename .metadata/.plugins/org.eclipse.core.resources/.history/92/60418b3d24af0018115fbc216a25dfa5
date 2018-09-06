@@ -1,0 +1,7 @@
+package com.mitrais.springmvc.model;
+
+public class Employee {
+	private AppUser appuser;
+	private String firstName;
+	private String lastName;
+}

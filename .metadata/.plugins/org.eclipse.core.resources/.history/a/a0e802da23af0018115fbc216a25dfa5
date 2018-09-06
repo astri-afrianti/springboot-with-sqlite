@@ -1,0 +1,6 @@
+package com.mitrais.springmvc.model;
+
+public class AppUser {
+	private String username;
+	private String Password;
+}

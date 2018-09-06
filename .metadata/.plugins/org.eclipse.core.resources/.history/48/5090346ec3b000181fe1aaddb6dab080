@@ -1,0 +1,10 @@
+package com.mitrais.blog.reporsitory;
+
+import java.io.Serializable;
+
+import org.springframework.data.repository.NoRepositoryBean;
+
+@NoRepositoryBean
+public interface CustomSearchRepository<T, ID extends Serializable> {
+
+}

@@ -1,0 +1,8 @@
+package com.mitrais.blog.reporsitory;
+
+import org.springframework.stereotype.Repository;
+
+@Repository
+public class BlogRepositoryImpl implements BlogRepository {
+
+}

@@ -1,0 +1,58 @@
+package com.mitrais.blog.service;
+
+import org.springframework.data.domain.Pageable;
+import org.springframework.stereotype.Service;
+
+import com.mitrais.blog.model.Blog;
+
+@Service
+public interface BlogService {
+	
+	/**
+	 * Create new instance of Blog
+	 * 
+	 * @param to be inserted Blog 
+	 * @return inserted Blog
+	 */
+	public Blog createBlog(Blog blog);
+	
+	/**
+	 * Update existing Blog
+	 * 
+	 * @param to be updated Blog
+	 * @return updated Blog
+	 */
+	public Blog updateBlog(Blog blog);
+	
+	/**
+	 * Delete existing Blog by id
+	 * 
+	 * @param Blog id
+	 * @return true if success, false if there's error or no action taken
+	 */
+	public boolean deleteBlog(int id); 
+	
+	/**
+	 * Get existing Blog by id
+	 * 
+	 * @param Blog id
+	 * @return expected Blog or null if it's not found 
+	 */
+	public Blog find(int id);
+	
+	/**
+	 * Get a page of non-deleted Blog
+	 * 
+	 * @param page details
+	 * @return collection of Blog
+	 */
+	public Iterable<Blog> findAll(Pageable pageable);
+	
+	/**
+	 * 
+	 * @param term
+	 * @param pageable
+	 * @return
+	 */
+	public Iterable<Blog> findBySearchTerm(String term, Pageable pageable);
+}

@@ -1,0 +1,22 @@
+package com.mitrais.blog.service;
+
+import org.springframework.stereotype.Service;
+
+import com.mitrais.blog.model.Blog;
+
+@Service
+public interface BlogService {
+	/**
+	 * Create new instance of Blog
+	 * @return inserted Blog
+	 */
+	public Blog createBlog();
+	
+	/**
+	 * Update existing Blog
+	 * @return updated Blog
+	 */
+	public Blog updateBlog();
+	
+	
+}

@@ -1,0 +1,19 @@
+package com.mitrais.springmvc.dao;
+
+import com.mitrais.springmvc.model.AppUser;
+
+public interface AppUserDao {
+	/**
+	 * Update all required properties after user is validated
+	 * @param appUser
+	 */
+	void login(AppUser appUser);
+	
+	/**
+	 * Check whether user name is registered 
+	 * and the password is correct 
+	 * @param appUser
+	 * @return the particular App User 
+	 */
+	AppUser validateUser(AppUser appUser);
+}

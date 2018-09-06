@@ -1,0 +1,37 @@
+package com.mitrais.blog.reporsitory;
+
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.repository.query.Param;
+import org.springframework.stereotype.Repository;
+
+import com.mitrais.blog.model.Blog;
+
+@Repository
+public interface BlogRepository extends JpaRepository<Blog, Integer> {
+
+	/**
+	 * Get a page of non-deleted Blog filter by a search term
+	 * 
+	 * @param search  term
+	 * @param paging  details
+	 * @param sorting details
+	 * @return Iterable Blog
+	 */
+	@Query("SELECT b FROM Blog b WHERE b.deleted = 0 "
+			+ "AND (b.title LIKE LOWER(CONCAT('%',:searchTerm, '%')) OR"
+				+ "b.content LIKE LOWER(CONCAT('%',:searchTerm, '%')))")
+	public Iterable<Blog> findBySearchTerm(@Param("searchTerm") String searchTerm, Pageable pageable, Sort sort);
+	
+	/**
+	 * Get a specific non-deleted Blog by id
+	 * 
+	 * @param id
+	 * @return 
+	 */
+	@Query("SELECT b FROM Blog b WHERE b.id = :id AND b.deleted = 0")
+	public Blog findBlog(@Param("id") int id);
+	
+}

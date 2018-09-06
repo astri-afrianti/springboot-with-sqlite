@@ -1,0 +1,5 @@
+package com.mitrais.springmvc.dao;
+
+public class EmployeeDaoImpl {
+
+}

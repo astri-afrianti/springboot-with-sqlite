@@ -1,0 +1,25 @@
+package com.mitrais.blog.reporsitory;
+
+import java.io.Serializable;
+import java.util.List;
+
+import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.repository.NoRepositoryBean;
+
+@NoRepositoryBean
+public interface CustomSearchRepository<T, ID extends Serializable> {
+
+	
+	/**
+	 * Get a page of non-deleted Blog filter by a search term
+	 * 
+	 * @param search  term
+	 * @param paging  details
+	 * @param sorting details
+	 * @return List Enity
+	 */
+	@Query("SELECT e FROM #{#entityName} e WHERE e.deleted = 0")
+	List<T> findAllActive();
+	
+	
+}

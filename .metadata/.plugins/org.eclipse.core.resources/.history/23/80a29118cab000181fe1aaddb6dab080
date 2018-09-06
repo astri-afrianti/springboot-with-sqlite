@@ -1,0 +1,9 @@
+package com.mitrais.blog.repository;
+
+import org.junit.runner.RunWith;
+
+@RunWith(SpringRunner.class)
+@DataJpaTest
+public class BlogRepositoryTest {
+
+}

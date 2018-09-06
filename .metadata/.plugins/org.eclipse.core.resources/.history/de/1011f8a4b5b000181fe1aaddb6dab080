@@ -1,0 +1,26 @@
+package com.mitrais.blog.reporsitory;
+
+import javax.persistence.EntityManager;
+
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
+import org.springframework.data.jpa.repository.support.SimpleJpaRepository;
+import org.springframework.stereotype.Repository;
+
+import com.mitrais.blog.model.Blog;
+
+@Repository
+public class BlogRepositoryImpl extends SimpleJpaRepository<Blog, Integer> implements BlogRepository {
+
+	
+	public BlogRepositoryImpl(Class<Blog> domainClass, EntityManager em) {
+		super(domainClass, em);
+		// TODO Auto-generated constructor stub
+	}
+
+	@Override
+	public Iterable<Blog> findBySearchTerm(String term, Pageable pageable, Sort sort) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+}

@@ -1,0 +1,8 @@
+package com.mitrais.springmvc.dao;
+
+import com.mitrais.springmvc.model.AppUser;
+
+public interface AppUserDao {
+	AppUser login(AppUser appUser);
+	
+}

@@ -1,0 +1,5 @@
+package com.mitrais.springmvc.controller;
+
+public class RegistrationController {
+
+}

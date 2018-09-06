@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="BlogRepositoryIntegrationTest.findActiveWithActiveBlogId2" project="blog" tests="1" started="1" failures="0" errors="0" ignored="0">
+  <testcase name="findActiveWithActiveBlogId2" classname="com.mitrais.blog.repository.BlogRepositoryIntegrationTest" time="0.205"/>
+</testrun>

@@ -1,0 +1,8 @@
+package com.mitrais.blog.reporsitory;
+
+import org.springframework.data.repository.NoRepositoryBean;
+
+@NoRepositoryBean
+public interface CustomSearchRepository {
+
+}

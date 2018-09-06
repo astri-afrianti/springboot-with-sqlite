@@ -1,0 +1,5 @@
+package com.mitrais.springmvc.model;
+
+public class AppUser {
+	
+}

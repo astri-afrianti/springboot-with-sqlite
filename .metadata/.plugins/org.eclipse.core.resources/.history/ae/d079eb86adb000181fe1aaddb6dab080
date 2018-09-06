@@ -1,0 +1,11 @@
+package com.mitrais.blog.service;
+
+import org.springframework.stereotype.Service;
+
+import com.mitrais.blog.model.Blog;
+
+@Service
+public interface BlogService {
+	public Blog createBlog();
+	
+}

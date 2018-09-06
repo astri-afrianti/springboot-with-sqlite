@@ -1,0 +1,12 @@
+package com.mitrais.blog.config;
+
+import org.hibernate.dialect.Dialect;
+
+/**
+ * 
+ * @author https://github.com/bharat0126/springboot-sqlite-app/blob/master/sqlite-db-sample/src/main/java/com/sqlite/config/SQLiteDialect.java
+ *
+ */
+public class SqliteDialect extends Dialect {
+	
+}

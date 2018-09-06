@@ -1,0 +1,5 @@
+package com.mitrais.blog.controller;
+
+public class BlogController {
+
+}

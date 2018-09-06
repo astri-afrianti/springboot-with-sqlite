@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="Rerun com.mitrais.blog.repository.BlogRepositoryIntegrationTest" project="blog" tests="2" started="2" failures="0" errors="0" ignored="0">
+  <testsuite name="com.mitrais.blog.repository.BlogRepositoryIntegrationTest" time="1.092">
+    <testcase name="findActiveWithActiveBlogId" classname="com.mitrais.blog.repository.BlogRepositoryIntegrationTest" time="1.06"/>
+    <testcase name="findActiveWithActiveBlogId2" classname="com.mitrais.blog.repository.BlogRepositoryIntegrationTest" time="0.032"/>
+  </testsuite>
+</testrun>

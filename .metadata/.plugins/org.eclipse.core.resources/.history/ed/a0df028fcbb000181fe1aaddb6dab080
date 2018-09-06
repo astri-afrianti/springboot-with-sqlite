@@ -1,0 +1,39 @@
+package com.mitrais.blog.repository;
+
+import static org.junit.Assert.assertEquals;
+
+import java.util.Date;
+
+import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
+import org.springframework.boot.test.autoconfigure.orm.jpa.TestEntityManager;
+import org.springframework.test.context.junit4.SpringRunner;
+
+import com.mitrais.blog.model.Blog;
+import com.mitrais.blog.reporsitory.BlogRepository;
+
+@RunWith(SpringRunner.class)
+@DataJpaTest
+public class BlogRepositoryTest {
+	
+	@Autowired
+	private BlogRepository blogRepository;
+	
+	@Test
+	public void mustSave() {
+		Date currentDate = new Date();
+		Blog blog = new Blog();
+		blog.setTitle("Abc");
+		blog.setContent("This is Abc's content");
+		blog.setCreated(currentDate);
+		blog.setLastUpdated(currentDate);
+		blog.setDeleted(false);
+		
+		blogRepository.save(blog);
+		
+		long blogCount = blogRepository.count();
+		assertEquals(1, blogCount);
+	}
+}

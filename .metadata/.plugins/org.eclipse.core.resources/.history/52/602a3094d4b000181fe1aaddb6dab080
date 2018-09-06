@@ -1,0 +1,5 @@
+package com.mitrais.blog.repository;
+
+public class CustomSearchRepositoryTest {
+
+}

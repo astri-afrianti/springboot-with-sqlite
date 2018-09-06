@@ -1,0 +1,62 @@
+package com.mitrais.blog.service;
+
+import java.util.Date;
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Pageable;
+import org.springframework.stereotype.Service;
+
+import com.mitrais.blog.model.Blog;
+import com.mitrais.blog.reporsitory.BlogRepository;
+
+@Service
+public class BlogServiceImpl implements BlogService {
+
+	@Autowired
+	private BlogRepository blogRepository;
+
+	@Override
+	public Blog createBlog(Blog blog) {
+		Date currentDate = new Date();
+		blog.setCreated(currentDate);
+		blog.setLastUpdated(currentDate);
+
+		return blogRepository.save(blog);
+	}
+
+	@Override
+	public Blog updateBlog(Blog blog) {
+		Date currentDate = new Date();
+		blog.setLastUpdated(currentDate);
+
+		return blogRepository.save(blog);
+	}
+
+	@Override
+	public boolean deleteBlog(int id) {
+		Blog existingBlog = blogRepository.findActive(id);
+
+		if (existingBlog == null) {
+			return false;
+		}
+
+		// TODO add catch?
+		return true;
+	}
+
+	@Override
+	public Blog find(int id) {
+		return blogRepository.findActive(id);
+	}
+
+	@Override
+	public List<Blog> findAll(Pageable pageable) {
+		return blogRepository.findAllActive(pageable);
+	}
+
+	@Override
+	public List<Blog> findBySearchTerm(String term, Pageable pageable) {
+		return blogRepository.findBySearchTerm(term, pageable);
+	}
+}

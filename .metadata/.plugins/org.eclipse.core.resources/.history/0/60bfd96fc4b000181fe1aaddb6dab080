@@ -1,0 +1,29 @@
+package com.mitrais.blog.reporsitory;
+
+import java.io.Serializable;
+import java.util.List;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.repository.NoRepositoryBean;
+
+@NoRepositoryBean
+public interface CustomSearchRepository<T, ID extends Serializable> extends JpaRepository<T, ID> {
+
+	
+	/*
+	 * (non-Javadoc)
+	 * @see org.springframework.data.repository.CrudRepository#findAll()
+	 */
+	@Override
+	@Query("SELECT e FROM #{#entityName} e WHERE e.deleted = 0")
+	List<T> findAll();
+	
+	/*
+	 * (non-Javadoc)
+	 * @see org.springframework.data.repository.CrudRepository#findAll(java.lang.Iterable)
+	 */
+	@Override
+	@Query("SELECT e FROM #{#entityName} e WHERE e.deleted = 0")
+	List<T> findAll(Iterable<ID> ids);
+}

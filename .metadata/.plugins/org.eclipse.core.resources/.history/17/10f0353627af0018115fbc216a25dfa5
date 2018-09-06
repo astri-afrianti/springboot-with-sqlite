@@ -1,0 +1,7 @@
+package com.mitrais.springmvc.dao;
+
+import com.mitrais.springmvc.model.Employee;
+
+public interface EmployeeDao {
+	boolean register(Employee employee);
+}

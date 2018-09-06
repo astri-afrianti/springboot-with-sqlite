@@ -1,0 +1,5 @@
+package com.mitrais.blog.reporsitory;
+
+public class BlogRepositoryImpl {
+
+}

@@ -1,0 +1,5 @@
+package com.mitrais.blog.service;
+
+public class BlogServiceImpl implements BlogService {
+
+}

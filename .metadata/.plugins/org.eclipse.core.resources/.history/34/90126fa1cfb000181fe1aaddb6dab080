@@ -1,0 +1,62 @@
+package com.mitrais.blog.repository;
+
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotNull;
+
+import java.util.Date;
+import java.util.LinkedList;
+import java.util.List;
+
+import org.junit.Before;
+import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
+import org.springframework.test.context.junit4.SpringRunner;
+
+import com.mitrais.blog.model.Blog;
+import com.mitrais.blog.reporsitory.BlogRepository;
+
+@RunWith(SpringRunner.class)
+@DataJpaTest
+public class BlogRepositoryIntegrationTest {
+	
+	@Autowired
+	private BlogRepository blogRepository;
+	
+	@Before
+	public void cleanMemory() {
+		blogRepository.deleteAll();
+		Date currentDate = new Date();
+		List<Blog> sampleBlog = new LinkedList<Blog>();
+		
+		Blog nonDeletedBlog = new Blog();
+		nonDeletedBlog.setTitle("not deleted");
+		nonDeletedBlog.setContent("This is not deleted's content");
+		nonDeletedBlog.setCreated(currentDate);
+		nonDeletedBlog.setLastUpdated(currentDate);
+		nonDeletedBlog.setDeleted(false);
+		sampleBlog.add(nonDeletedBlog);
+		
+		Blog deletedBlog = new Blog();
+		deletedBlog.setTitle("deleted");
+		deletedBlog.setContent("This is not deleted's content");
+		deletedBlog.setCreated(currentDate);
+		deletedBlog.setLastUpdated(currentDate);
+		deletedBlog.setDeleted(true);
+		sampleBlog.add(deletedBlog);
+		
+	}
+	
+	@Test
+	public void findActiveWithActiveBlogId() {
+		List<Blog> allBlog = blogRepository.findAll();
+		
+		for (Blog blog : allBlog) {
+			System.out.println(blog.toString());
+		}
+		
+		Blog nonDeletedBlog = blogRepository.findActive(1);
+		assertNotNull(nonDeletedBlog);		
+	}
+}

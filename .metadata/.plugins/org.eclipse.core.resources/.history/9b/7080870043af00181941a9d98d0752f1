@@ -1,0 +1,22 @@
+package com.mitrais.blog.controller;
+
+import java.util.List;
+
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.mitrais.blog.mockeddata.BlogMockedData;
+import com.mitrais.blog.model.Blog;
+
+@RestController
+public class BlogController {
+
+	BlogMockedData blogMockedData = BlogMockedData.getInstance();
+
+	@GetMapping("/")
+	public List<Blog> index() {
+		return blogMockedData.fetchBlogs();
+	}
+
+}

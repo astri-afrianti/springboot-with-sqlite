@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="BlogRepositoryIntegrationTest" project="blog" tests="4" started="4" failures="0" errors="0" ignored="0">
+  <testsuite name="com.mitrais.blog.repository.BlogRepositoryIntegrationTest" time="2.368">
+    <testcase name="findActiveWithActiveBlogId" classname="com.mitrais.blog.repository.BlogRepositoryIntegrationTest" time="1.023"/>
+    <testcase name="findAllActivePageable" classname="com.mitrais.blog.repository.BlogRepositoryIntegrationTest" time="0.643"/>
+    <testcase name="findActiveWithNonActiveBlogId" classname="com.mitrais.blog.repository.BlogRepositoryIntegrationTest" time="0.673"/>
+    <testcase name="findActiveByTitle" classname="com.mitrais.blog.repository.BlogRepositoryIntegrationTest" time="0.028"/>
+  </testsuite>
+</testrun>

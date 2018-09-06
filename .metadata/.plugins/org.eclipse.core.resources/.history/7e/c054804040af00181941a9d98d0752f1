@@ -1,0 +1,8 @@
+package com.mitrais.mainapp;
+
+public class MainApplicationClass {
+	
+	public static void main(String[] args) {
+		
+	}
+}

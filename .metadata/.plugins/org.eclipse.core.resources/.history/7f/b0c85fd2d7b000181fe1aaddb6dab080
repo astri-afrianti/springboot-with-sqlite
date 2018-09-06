@@ -1,0 +1,64 @@
+package com.mitrais.blog.service;
+
+import java.util.List;
+
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
+
+import com.mitrais.blog.model.Blog;
+
+public interface BlogService {
+	
+	/**
+	 * Create new instance of Blog
+	 * 
+	 * @param to be inserted Blog 
+	 * @return inserted Blog
+	 */
+	public Blog createBlog(Blog blog);
+	
+	/**
+	 * Update existing Blog
+	 * 
+	 * @param to be updated Blog
+	 * @return updated Blog
+	 */
+	public Blog updateBlog(Blog blog);
+	
+	/**
+	 * Delete existing Blog by id
+	 * This method won't physically delete the row,
+	 * instead, it set the deleted value to true 
+	 * 
+	 * @param Blog id
+	 * @return true if success, false if there's error or no action taken
+	 */
+	public boolean deleteBlog(int id); 
+	
+	/**
+	 * Get existing Blog by id
+	 * 
+	 * @param Blog id
+	 * @return expected Blog or null if it's not found 
+	 */
+	public Blog find(int id);
+	
+	/**
+	 * Get a page of non-deleted Blog
+	 * 
+	 * @param paging details
+	 * @param sorting details
+	 * @return collection of Blog
+	 */
+	public List<Blog> findAll(Pageable pageable);
+	
+	/**
+	 * Get a page of non-deleted Blog filter by a search term
+	 * 
+	 * @param search term
+	 * @param paging details
+	 * @param sorting details
+	 * @return
+	 */
+	public List<Blog> findBySearchTerm(String term, Pageable pageable);
+}
